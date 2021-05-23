@@ -6,27 +6,27 @@ githubAuthToken="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"
 githubUser="savindug"
 githubRepo="hotel-revenue-service"
 
-cd $serverRoot && sudo curl -O -J -L -u $githubAuthToken:x-oauth-basic https://github.com/$githubUser/$githubRepo/archive/master.zip
+cd /var/www/html/ && sudo curl -O -J -L -u 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:x-oauth-basic https://github.com/savindug/hotel-revenue-service/archive/master.zip
 
 
-if [ -f $serverRoot/hotel-revenue-service-master.zip ]; then
+if [ -f /var/www/html//hotel-revenue-service-master.zip ]; then
     
-    sudo unzip -q $serverRoot/hotel-revenue-service-master.zip
+    sudo unzip -q /var/www/html//hotel-revenue-service-master.zip
 
     
-    sudo rm $serverRoot/hotel-revenue-service-master.zip
+    sudo rm /var/www/html//hotel-revenue-service-master.zip
 
  
     pm2 stop ratebuckets-server
 
     
-    sudo rm -rf $projectDir
+    sudo rm -rf /var/www/html/hotel-revenue-service
 
     
-    sudo mv hotel-revenue-service-master $projectDir
+    sudo mv hotel-revenue-service-master /var/www/html/hotel-revenue-service
 
    
-    cd $projectDir
+    cd /var/www/html/hotel-revenue-service
 
    
     sudo npm install
