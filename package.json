@@ -1,0 +1,22 @@
+{
+  "name": "git-automatic-deploy-webhook",
+  "version": "1.0.0",
+  "description": "git-automatic-deploy-webhook",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node ./src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/savindug/git-automatic-deploy-webhook.git"
+  },
+  "author": "savindu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/savindug/git-automatic-deploy-webhook/issues"
+  },
+  "homepage": "https://github.com/savindug/git-automatic-deploy-webhook#readme",
+  "dependencies": {
+    "gith": "^1.0.4"
+  }
+}
